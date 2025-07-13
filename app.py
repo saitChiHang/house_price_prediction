@@ -11,6 +11,7 @@ st.set_page_config(
 )
 
 st.html(html_styles)
+st.set_option('client.showErrorDetails', False)
 
 pages = ["Welcome","Prediction","Exploration", "About"]
 
