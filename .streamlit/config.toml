@@ -1,6 +1,9 @@
 [client]
 showErrorDetails = false
 
+[server]
+showErrorDetails = false
+
 [theme]
 base="dark"
 
