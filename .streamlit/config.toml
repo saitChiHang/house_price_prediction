@@ -3,3 +3,7 @@ showErrorDetails = false
 
 [theme]
 base="dark"
+
+[global]
+disableWidgetStateDuplicationWarning = true
+showWarningOnDirectExecution = false
