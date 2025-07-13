@@ -41,7 +41,8 @@ def create_form_item(feature_list, feature_type):
                     elif feature_type == "numeric_discrete":
                         parameters[feature_list[index*2+i]] = st.number_input(caption, min_value=0, max_value=10, step=1, key=f"input_{feature_list[index*2+i]}")
                     elif feature_type == "numeric_continuous":
-                        parameters[feature_list[index*2+i]] = st.slider(caption, min_value=0, max_value=20000, value=50) #st.number_input(feature_list[index*2+i], min_value=0.0, step=0.1, key=f"input_{feature_list[index*2+i]}")
+                        #parameters[feature_list[index*2+i]] = st.slider(caption, min_value=0, max_value=20000, value=50) 
+                        parameters[feature_list[index*2+i]] = st.number_input(caption, min_value=0,max_value=20000, step=50, key=f"input_{feature_list[index*2+i]}")
 
 def prediction():
     st.header("House Price Prediction", divider='rainbow',anchor=False)
