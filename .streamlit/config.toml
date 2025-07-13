@@ -1,12 +1,2 @@
-[client]
-showErrorDetails = false
-
-[server]
-showErrorDetails = false
-
 [theme]
 base="dark"
-
-[global]
-disableWidgetStateDuplicationWarning = true
-showWarningOnDirectExecution = false
