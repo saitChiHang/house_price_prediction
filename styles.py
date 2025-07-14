@@ -48,13 +48,13 @@ fontawesome_css = '''<link rel="stylesheet" href="https://cdnjs.cloudflare.com/a
 
 reeve_info = {
     "name": "Reeve Wong",
-    "Introduction": "With over 10 years of experience in application development and 2 years in GIS, I specialize in integrating spatial data systems and developing enterprise applications. My expertise spans across GIS technologies, Java-based systems, and AI applications, with a strong focus on solving complex technical challenges.",
+    "introduction": "With over 10 years of experience in application development and 2 years in GIS, I specialize in integrating spatial data systems and developing enterprise applications. My expertise spans across GIS technologies, Java-based systems, and AI applications, with a strong focus on solving complex technical challenges.",
     "linkedin": "https://www.linkedin.com/in/reeve-wong-279a78163/",
     "portfolio": "https://saitchihang.github.io/portfolio/"}
 
 kevin_info = {
     "name": "Kevin Kovacik",
-    "Introduction": "To be confirmed",
+    "introduction": "To be confirmed",
     "linkedin": "To be confirmed",
     "portfolio": "To be confirmed"}
 

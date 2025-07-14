@@ -13,4 +13,4 @@ def about():
             name_col.markdown(developer_name_markdown(developer['name']), unsafe_allow_html=True)
             portfolio_col.markdown(developer_portfolio_markdown(developer['portfolio']), unsafe_allow_html=True)
             linkedin_col.markdown(developer_linkedin_markdown(developer['linkedin']), unsafe_allow_html=True)
-            st.write(developer_introduction_markdown(developer['Introduction']), unsafe_allow_html=True)
+            st.write(developer_introduction_markdown(developer['introduction']), unsafe_allow_html=True)
