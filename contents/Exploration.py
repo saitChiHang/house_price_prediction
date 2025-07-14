@@ -6,7 +6,7 @@ from styles import vis_spec
 @st.cache_resource
 def get_pyg_renderer() -> "StreamlitRenderer":
     df = pd.read_csv("data/Housing.csv")
-    return StreamlitRenderer(df,spec = vis_spec)
+    return StreamlitRenderer(df,appearance="dark", spec = vis_spec)
 
 def exploration():
     st.header("Data Exploration", divider='rainbow', anchor=False)
