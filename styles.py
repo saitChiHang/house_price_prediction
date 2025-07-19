@@ -54,9 +54,9 @@ reeve_info = {
 
 kevin_info = {
     "name": "Kevin Kovacik",
-    "introduction": "To be confirmed",
-    "linkedin": "To be confirmed",
-    "portfolio": "To be confirmed"}
+    "introduction": "Hello! I am a former IT professional with 5 years experience in the industry. Given the potential of artificial intelligence, I am enrolled in a year long program at SAIT to learn more about it and expand my technological skill set.",
+    "linkedin": "https://www.linkedin.com/in/kevinkovacik/",
+    "portfolio": "https://github.com/k-kovacik"}
 
 developers = [reeve_info, kevin_info]
 
