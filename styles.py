@@ -35,6 +35,31 @@ navbar_options = {
     "use_padding": False,
 }
 
+# Welcome Page Message
+welcome_msg = """
+            <h3 style="pointer-events: none;">Site Overview</h3>
+            <h5 style="pointer-events: none;">Currently, our model is able to estimate a price based on the following features:</h5>
+            <p>This site serves as a means for users to obtain an estimated price on their house given the features of the house</p>
+            <ul>
+                <li>Area: The total area of the house in square feet</li>
+                <li>Bedrooms: The number of bedrooms in the house </li>
+                <li>Bathrooms: The number of bathrooms in the house </li>
+                <li>Stories: The number of stories in the house</li>
+                <li>Mainroad: Whether the house is connected to the main road</li>
+                <li>Guestroom: Whether the house has a guest room </li> 
+                <li>Basement: Whether the house has a basement</li>
+                <li>Hot Water Heating: Whether the house has a hot water heating system</li>
+                <li>Air Conditioning: Whether the house has an air conditioning system</li>
+                <li>Parking: The number of parking spaces available within the house</li>
+                <li>Prefarea: Whether the house is located in a preferred area</li>
+                <li>Furnishing status: The furnishing status of the house </li>
+            </ul>
+            <h4 style="pointer-events: none;">An interface where you can enter your house's features can be found on the 'Prediction' page. Feel free to give it a try!</h4>
+            <h4 style="pointer-events: none;">You can also explore the data obtain on our AI model can be viewed on the 'Exploration' page</h4>
+            <h4 style="pointer-events: none;">Finally, if you wish to know more about who made this model, head on over to the 'About' page!</h4>
+            """
+
+
 # Visualization specification for Pygwalker
 vis_spec = r"""{"config":[{"config":{"defaultAggregated":false,"geoms":["auto"],"coordSystem":"generic","limit":-1,"timezoneDisplayOffset":0},"encodings":{"dimensions":[{"fid":"bedrooms","name":"bedrooms","basename":"bedrooms","semanticType":"quantitative","analyticType":"dimension","offset":0},{"fid":"bathrooms","name":"bathrooms","basename":"bathrooms","semanticType":"quantitative","analyticType":"dimension","offset":0},{"fid":"stories","name":"stories","basename":"stories","semanticType":"quantitative","analyticType":"dimension","offset":0},{"fid":"mainroad","name":"mainroad","basename":"mainroad","semanticType":"nominal","analyticType":"dimension","offset":0},{"fid":"guestroom","name":"guestroom","basename":"guestroom","semanticType":"nominal","analyticType":"dimension","offset":0},{"fid":"basement","name":"basement","basename":"basement","semanticType":"nominal","analyticType":"dimension","offset":0},{"fid":"hotwaterheating","name":"hotwaterheating","basename":"hotwaterheating","semanticType":"nominal","analyticType":"dimension","offset":0},{"fid":"airconditioning","name":"airconditioning","basename":"airconditioning","semanticType":"nominal","analyticType":"dimension","offset":0},{"fid":"parking","name":"parking","basename":"parking","semanticType":"quantitative","analyticType":"dimension","offset":0},{"fid":"prefarea","name":"prefarea","basename":"prefarea","semanticType":"nominal","analyticType":"dimension","offset":0},{"fid":"furnishingstatus","name":"furnishingstatus","basename":"furnishingstatus","semanticType":"nominal","analyticType":"dimension","offset":0},{"fid":"gw_mea_key_fid","name":"Measure names","analyticType":"dimension","semanticType":"nominal"}],"measures":[{"fid":"price","name":"price","basename":"price","analyticType":"measure","semanticType":"quantitative","aggName":"sum","offset":0},{"fid":"area","name":"area","basename":"area","analyticType":"measure","semanticType":"quantitative","aggName":"sum","offset":0},{"fid":"gw_count_fid","name":"Row count","analyticType":"measure","semanticType":"quantitative","aggName":"sum","computed":true,"expression":{"op":"one","params":[],"as":"gw_count_fid"}},{"fid":"gw_mea_val_fid","name":"Measure values","analyticType":"measure","semanticType":"quantitative","aggName":"sum"}],"rows":[{"fid":"price","name":"price","basename":"price","analyticType":"measure","semanticType":"quantitative","aggName":"sum","offset":0}],"columns":[{"fid":"area","name":"area","basename":"area","analyticType":"measure","semanticType":"quantitative","aggName":"sum","offset":0}],"color":[],"opacity":[],"size":[],"shape":[],"radius":[],"theta":[],"longitude":[],"latitude":[],"geoId":[],"details":[],"filters":[],"text":[]},"layout":{"showActions":false,"showTableSummary":false,"stack":"stack","interactiveScale":false,"zeroScale":true,"size":{"mode":"full","width":320,"height":200},"format":{},"geoKey":"name","resolve":{"x":false,"y":false,"color":false,"opacity":false,"shape":false,"size":false}},"visId":"gw_Nl3O","name":"Chart 1"}],"chart_map":{},"workflow_list":[{"workflow":[{"type":"view","query":[{"op":"raw","fields":["area","price"]}]}]}],"version":"0.4.9.15"}"""
 
