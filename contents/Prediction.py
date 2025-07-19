@@ -1,5 +1,8 @@
 import streamlit as st
 from styles import styled_result
+from pycaret.regression import load_model, predict_model
+import pandas as pd
+import numpy as np
 
 boolean_features = ["mainroad", "guestroom", "basement", "hotwaterheating", "airconditioning", "prefarea"]
 categorical_features = ["furnishingstatus"]
@@ -41,8 +44,39 @@ def create_form_item(feature_list, feature_type):
                     elif feature_type == "numeric_discrete":
                         parameters[feature_list[index*2+i]] = st.number_input(caption, min_value=0, max_value=10, step=1, key=f"input_{feature_list[index*2+i]}")
                     elif feature_type == "numeric_continuous":
-                        #parameters[feature_list[index*2+i]] = st.slider(caption, min_value=0, max_value=20000, value=50) 
-                        parameters[feature_list[index*2+i]] = st.number_input(caption, min_value=0,max_value=20000, step=50, key=f"input_{feature_list[index*2+i]}")
+                       parameters[feature_list[index*2+i]] = st.number_input(caption, min_value=50,max_value=20000, step=50, key=f"input_{feature_list[index*2+i]}")
+
+def data_processing(df):
+    data = df.copy()
+    furnishing_status_encoding = {
+        'furnished': 2,
+        'semi-furnished': 1,
+        'unfurnished': 0
+    }
+    yes_no_encoding = {
+        'yes': 1,
+        'no': 0
+    }
+    for feature in categorical_features:
+        data[feature] = data[feature].apply(lambda x: furnishing_status_encoding.get(x.lower(), np.nan))
+    for feature in boolean_features:
+        data[feature] = data[feature].apply(lambda x: yes_no_encoding.get(x.lower(), np.nan))
+    for feature in numeric_continuous_features:
+        data[feature]= np.log(data[feature])
+    return data
+
+@st.cache_resource
+def load_predict_model():
+    return load_model('model/house_pipeline')
+
+def make_prediction(parameters):
+    df = pd.DataFrame(parameters, index=[0])
+    data = data_processing(df)
+    loaded_best_pipeline = load_predict_model()
+    predictions = predict_model(loaded_best_pipeline, data=data)
+    price = predictions['prediction_label'][0]
+    price_str = f'${np.exp(price):,.0f}'
+    return price_str
 
 def prediction():
     st.header("House Price Prediction", divider='rainbow',anchor=False)
@@ -56,9 +90,7 @@ def prediction():
             submitted = st.form_submit_button('Predict Price')
         with col_right:
             if submitted:
-                # Here you would typically call your prediction function with the parameters
-                # For example: result = predict_house_price(parameters)
-                result = "Work in progress"
+                result = make_prediction(parameters)
                 st.markdown(styled_result(result), unsafe_allow_html=True)
                 with st.popover("Submitted Parameters"):
                     st.write("Parameters:", parameters)

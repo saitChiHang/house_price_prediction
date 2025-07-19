@@ -1,3 +1,4 @@
 streamlit==1.46.1
 streamlit-community-navigation-bar==4.7.9
 pygwalker==0.4.9.15
+pycaret==3.3.2
