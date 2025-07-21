@@ -68,9 +68,11 @@ streamlit run app.py
 ## Developer Info
 
 - **Reeve Wong**  
+  With over 10 years of experience in application development and 2 years in GIS, I specialize in integrating spatial data systems and developing enterprise applications. My expertise spans across GIS technologies, Java-based systems, and AI applications, with a strong focus on solving complex technical challenges.
   [LinkedIn](https://www.linkedin.com/in/reeve-wong-279a78163/) | [Portfolio](https://saitchihang.github.io/portfolio/)
 - **Kevin Kovacik**  
-  (To be confirmed)
+  Hello! I am a former IT professional with 5 years experience in the industry. Given the potential of artificial intelligence, I am enrolled in a year long program at SAIT to learn more about it and expand my technological skill set.
+  [LinkedIn](https://www.linkedin.com/in/kevinkovacik/) | [Portfolio](https://github.com/k-kovacik/)
 
 ---
 
