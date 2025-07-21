@@ -99,7 +99,7 @@ def developer_portfolio_markdown(portfolio_url):
 def developer_linkedin_markdown(linkedin_url):
     markdown_string = "<div style='display: flex; align-items: center; height: 40px;'>" + \
                         "<i class='fa-brands fa-linkedin'></i>" + \
-                        f"<a style='margin-left: 5px;' href='{linkedin_url}'> linkedin </a></div>"
+                        f"<a style='margin-left: 5px;' href='{linkedin_url}'> Linkedin </a></div>"
     return markdown_string
 
 def developer_introduction_markdown(introduction_text):
